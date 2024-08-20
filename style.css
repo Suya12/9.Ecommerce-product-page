@@ -1,0 +1,165 @@
+
+
+body {
+    display: grid;
+    grid-template-rows: 0.8fr 3fr;
+    grid-template-areas: 
+    "header header"
+    "main main";
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    padding-left: 12rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header div {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    cursor:pointer;
+}
+/*--------------------------------------------------*/
+
+.main {
+    margin-bottom: 10rem;
+    padding-left: 15em;
+    padding-right: 15em;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*-------------image-section------------------ */
+
+.extend-image {
+    width: 34rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.thumbnail-list {
+    display: flex;
+    user-select: none;
+}
+
+.thumbnail-list img {
+    margin: 1rem;
+    width:7rem;
+    border-radius: 10px;
+}
+
+.thumbnail-list img:active {
+    filter: opacity(0.5) drop-shadow(0 0 0 whitesmoke);
+}
+
+.thumbnail-list img::after {
+    filter: opacity(0.5) drop-shadow(0 0 0 whitesmoke);
+}
+
+
+/*---------------text-section--------------------- */
+
+.text-section{
+    width: 90%;
+    padding-left: 3rem;
+}
+
+.cart-button {
+    background-color:  hsl(26, 100%, 55%);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 16rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+.count-div {
+    background-color: whitesmoke;
+    display: flex;
+    border-radius: 1rem;
+    width: 10rem;
+    
+}
+
+.sub-button {
+    color:hsl(26, 100%, 55%);
+    width: 33%;
+    font-size: 1.5rem;
+    font:bold;
+
+    border: none;
+    cursor: pointer;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.add-button{
+    color:hsl(26, 100%, 55%);
+    width: 33%;
+    font-size: 1.5rem;
+    font:bold;
+
+    border: none;
+    cursor: pointer;
+    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.count-span {
+    border: none;
+    width: 33%;
+    font-size: 1.5rem;
+    font:bold;
+}
+
+/*------------------dialog----------------- */
+
+dialog {
+    border : none;
+    background-color: transparent;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경색 설정 */
+    transition: background-color 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.close-button {
+    border : none;
+    color:white;
+    background-color: transparent;
+    cursor: pointer;
+}
+.close-button:hover {
+    border : 1px solid white;
+}
+.arrow-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: white; /* 버튼 글자색 */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 50%; /* 원형 버튼 */
+    user-select: none;
+}
+
+.arrow-button.left {
+    left: 15px; /* 왼쪽 화살표 위치 */
+}
+
+.arrow-button.right {
+    right: 15px; /* 오른쪽 화살표 위치 */
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
